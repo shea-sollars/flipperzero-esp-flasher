@@ -2,11 +2,9 @@ name: "FAP Build"
 on:
   push:
     branches:
-      - main
+      - feature_wifi_marauder_app
   pull_request:
-  schedule:
-    # do a build every day
-    - cron: "1 1 * * *"
+  workflow_dispatch:  # Manually triggered workflow
 jobs:
   ufbt-build-action:
     runs-on: ubuntu-latest
